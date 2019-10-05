@@ -1,9 +1,7 @@
 ---
 myhost:
- host:
-  rakesh
- 
-
+ host: rakesh
+  
  vars:
   ansible_user: administrator
   ansible_password: "ntms@123456"
