@@ -14,7 +14,7 @@
     - name: Start service BITS, if not started
       win_service:
         name: BITS
-        state: started
+        state: stopped
   # Handlers: handlers that are executed as a notify key from a task
 
   # Roles: list of roles to be imported into the play
