@@ -13,10 +13,6 @@
   tasks:
     - name: Install Telnet Client on Local Server
       setup:
-        gather_subset:
-          - '!all'
-          - '!any'
-          - facter
   # Handlers: handlers that are executed as a notify key from a task
 
   # Roles: list of roles to be imported into the play
