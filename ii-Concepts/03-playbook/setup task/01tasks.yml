@@ -4,17 +4,15 @@
  
   # Target: where our play will run and options it will run with
   hosts: 
-    win-grp
+    all
   #gather_facts: false
 
   # Variable: variables that will apply to the play, on all target systems
   
   # Task: the list of tasks that will be executed within the playbook
   tasks:
-    - name: Install Telnet Client on Local Server
-      win_feature:
-        name: Telnet-Client
-        state: absent
+    - name: Get whoami information
+      win_whoami:
   # Handlers: handlers that are executed as a notify key from a task
 
   # Roles: list of roles to be imported into the play
