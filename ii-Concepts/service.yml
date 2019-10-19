@@ -1,9 +1,9 @@
 ---
   hosts: 
     all
-  tasks:
-    - name: Start service BITS, if not started
-      win_service:
+  tasks: 
+    - name: Start service BITS if not started
+      win_service: 
         name: BITS
         state: stopped
 ...
