@@ -7,6 +7,6 @@
   tasks: 
     - name: Start service BITS if not started
       win_service: 
-        name: {{servicenames}}
+        name: {{servicenames[0]}}
         state: stopped
 ...
