@@ -12,7 +12,7 @@
   # Task: the list of tasks that will be executed within the playbook
   tasks:
 - name: Start service BITS, if not started
-  service:
+  win_service:
     name: BITS
     state: started
   # Handlers: handlers that are executed as a notify key from a task
