@@ -12,9 +12,11 @@
   # Task: the list of tasks that will be executed within the playbook
   tasks:
     - name: Install Telnet Client on Local Server
-      win_feature:
-        name: Telnet-Client
-        state: absent
+      setup:
+        gather_subset:
+          - '!all'
+          - '!any'
+          - facter
   # Handlers: handlers that are executed as a notify key from a task
 
   # Roles: list of roles to be imported into the play

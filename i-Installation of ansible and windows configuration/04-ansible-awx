@@ -13,7 +13,7 @@ install docker
 apt install docker.io
 
 apt install python-pip -y
-pip install docker-compose
+pip install docker-compose==1.9.0
 pip install docker
 
 # or pip install docker-py
@@ -67,7 +67,7 @@ scm credential
 
 docker logs -f awx_task
 
-docker exec -it <container name> /bin/bash
+docker exec -it 65184674988e /bin/bash
 
 docker stop $(docker ps -a -q)
 
