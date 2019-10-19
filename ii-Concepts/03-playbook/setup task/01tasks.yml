@@ -11,8 +11,14 @@
   
   # Task: the list of tasks that will be executed within the playbook
   tasks:
-    - name: Get whoami information
-      win_whoami:
+   - name: Create an application shortcut for the Ansible website
+     win_shortcut:
+      src: '%ProgramFiles%\Google\Chrome\Application\chrome.exe'
+      dest: '%UserProfile%\Desktop\Ansible website.lnk'
+      arguments: --new-window https://ansible.com/
+      directory: '%ProgramFiles%\Google\Chrome\Application'
+      icon: '%ProgramFiles%\Google\Chrome\Application\chrome.exe,0'
+      hotkey: Ctrl+Alt+A
   # Handlers: handlers that are executed as a notify key from a task
 
   # Roles: list of roles to be imported into the play
