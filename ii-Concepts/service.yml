@@ -7,6 +7,8 @@
   tasks: 
     - name: Start service BITS if not started
       win_service: 
-        name: "{{servicenames[0]}}"
+        name: "{{item}}"
         state: stopped
+      loop:
+       -{{servicenames}}
 ...

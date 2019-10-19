@@ -6,5 +6,6 @@ servicesneedstodisable:
 servicenames:
  - BITS
  - spooler
+ - wuauserv
 
 ...
