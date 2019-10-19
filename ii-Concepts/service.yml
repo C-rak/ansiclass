@@ -2,9 +2,11 @@
 -
   hosts: 
     all
+  vars_files:
+    - servicename.yml
   tasks: 
     - name: Start service BITS if not started
       win_service: 
-        name: BITS
+        name: {{servicenames}}
         state: stopped
 ...
