@@ -6,23 +6,13 @@
     - servicename.yml
   tasks: 
     - name: Start service BITS if not started
-      win_service: 
-      {% for winservice in win_service -%}
-        service {{loop.index}} = {{winservice}}
-       {% endfor -%}
-
-    
-
-
-  This is test if ansible
-             {% if win_service == "BITS" -%}
-                   state=stopped
-
-             {% elif win_service == "spool" -%}
-                   state=start
-             {% else win_service == "wuauserv" -%}
-                   state=start
-             {% endif %}
-
-
+      win_service: >
+       name: 
+         {% for name == "{{servicenames[0]}}" -%}
+              state= stopped
+         {% for name == "{{servicenames[1]}}" -%}         
+              state= started
+         {% for name == "{{servicenames[2]}}" -%}
+              state= stopped  
+         {% endfor -%}         
 ...

@@ -1,11 +1,6 @@
 ---
-
-myname: service
-servicesneedstodisable:
-   [Bits, spooler]
 servicenames:
  - BITS
  - spooler
  - wuauserv
-
 ...
