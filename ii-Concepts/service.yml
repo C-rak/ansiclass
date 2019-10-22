@@ -2,12 +2,10 @@
 -
   hosts: 
     all
-  vars_files:
-    - servicename.yml
   tasks: 
     - name: jinja services template
       win_service:
-        - {% for name== BITS %}
+         {% for name== BITS %}
              state==started
-          {% endfor %}          
+         {% endfor %}          
 ...                   
