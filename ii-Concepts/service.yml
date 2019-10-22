@@ -8,8 +8,8 @@
     - name: jinja services template
       win_service:
         
-         {% for {{servicename[0]}} %}
-                 {{state}} = {{started}}
+         {% for "{{servicename[0]}}" %}
+              {{state}} = {{started}}
          {% for {{item.1}} in {{item}} %}
                  {{state}} = {{started}}          
          {% for {{item.3}} in {{item}} %}
