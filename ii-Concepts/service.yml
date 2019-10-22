@@ -5,14 +5,14 @@
   vars_files:
     - servicename.yml
   tasks: 
-    - name: Start service BITS if not started
+    - name: jinja templete
       win_service: >
        name: 
-         {% for name == "{{servicenames[0]}}" -%}
-              state= stopped
-         {% for name == "{{servicenames[1]}}" -%}         
-              state= started
-         {% for name == "{{servicenames[2]}}" -%}
-              state= stopped  
-         {% endfor -%}         
+        {% for name == "{{servicenames[0]}}" -%}
+          state= stopped  
+        {% for name == "{{servicenames[1]}}" -%}         
+          state= started
+        {% for name == "{{servicenames[2]}}" -%}
+          state= stopped  
+        {% endfor -%}         
 ...
