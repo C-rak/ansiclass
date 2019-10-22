@@ -5,14 +5,11 @@
   vars_files:
     - servicename.yml
   tasks: 
-    - name: jinja templete
-      win_service: >
-       name: 
-        {% for name == "{{servicenames[0]}}" -%}
-          state= stopped  
-        {% for name == "{{servicenames[1]}}" -%}         
-          state= started
-        {% for name == "{{servicenames[2]}}" -%}
-          state= stopped  
-        {% endfor -%}         
+    - name: jinja services template
+      win_service:
+        msg: >
+            The task has done 
+             {% for name == {{servicenames[0]}}  -%}
+                   state == stopped
+             {% endfor -%}        
 ...
