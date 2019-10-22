@@ -7,11 +7,7 @@
   tasks: 
     - name: jinja services template
       win_service:
-         {% for name== {{servicenames[0]}} %}
-                   state==started
-         {% for name== {{servicenames[1]}} %}
-                   state==stopped          
-         {% for name== {{servicenames[2]}} %}
-                   state==stopped
-         {% endfor %}          
+        - {% for name== BITS %}
+             state==started
+          {% endfor %}          
 ...                   
