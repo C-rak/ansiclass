@@ -7,9 +7,5 @@
   tasks: 
     - name: jinja services template
       win_service:
-        msg: >
-            The task has done 
-             {% for displayname=={{servicenames[0]}}  -%}
-                   state==stopped
-             {% endfor -%}        
+
 ...
