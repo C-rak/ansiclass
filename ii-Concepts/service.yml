@@ -7,16 +7,13 @@
   tasks: 
     - name: jinja services template
       win_service:
-        name:
-         {% for item.1 in items %}
+        
+         {% for {{servicename[0]}} %}
                  {{state}} = {{started}}
          {% for {{item.1}} in {{item}} %}
                  {{state}} = {{started}}          
          {% for {{item.3}} in {{item}} %}
                  {{state}} = {{started}}
          {% endfor %}   
-      with_items:
-       - BITS
-       - Spooler
-       - wuauserv
+      
 ...                   
