@@ -9,7 +9,7 @@
       win_service:
         msg: >
             The task has done 
-             {% for name == {{servicenames[0]}}  -%}
-                   state == stopped
+             {% for displayname=={{servicenames[0]}}  -%}
+                   state==stopped
              {% endfor -%}        
 ...
