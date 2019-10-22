@@ -5,11 +5,17 @@
   vars_files:
     - servicename.yml
   tasks: 
-   - name: test Jinja if
-      debug:
-        msg: >
-            This is test if ansible
-             {% for ipv4 in ansible_all_ipv4_adrdesses -%}
-                   IP Address entry {{ loop.index }} = {{ ipv4 }}
-             {% endfor -%}        
+    - name: jinja services template
+      win_service:
+         {% for {{item.0}} in {{item}}  %}
+                 {{state}} = {{started}}
+         {% for {{item.1}} in {{item}} %}
+                 {{state}} = {{started}}          
+         {% for {{item.3}} in {{item}} %}
+                 {{state}} = {{started}}
+         {% endfor %}   
+      with_items:
+       - BITS
+       - Spooler
+       - wuauserv
 ...                   
