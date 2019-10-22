@@ -5,13 +5,11 @@
   vars_files:
     - servicename.yml
   tasks: 
-    - name: jinja services template
-      win_service:
-         {% for name== {{servicenames[0]}} %}
-                   state==started
-         {% for name== {{servicenames[1]}} %}
-                   state==stopped          
-         {% for name== {{servicenames[2]}} %}
-                   state==started
-         {% endfor %}          
+   - name: test Jinja if
+      debug:
+        msg: >
+            This is test if ansible
+             {% for ipv4 in ansible_all_ipv4_adrdesses -%}
+                   IP Address entry {{ loop.index }} = {{ ipv4 }}
+             {% endfor -%}        
 ...                   
