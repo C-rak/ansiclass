@@ -19,14 +19,14 @@
       name: "{{item}}"
       state: > 
             {% for Serv in {{item}} -%}   
-            {% if Serv == "BITS" -%}
+             {% if Serv == "BITS" -%}
               stopped  
-            {% elif Serv == "Windows Audio" -%}
+             {% elif Serv == "Windows Audio" -%}
               started
-            {% else Serv == "Dnscache" -%}
+             {% else Serv == "Dnscache" -%}
               started
-            {% endif %}
-            {% endfor -%}""
+             {% endif %}
+            {% endfor -%}
       loop: 
            "{{servicesneedstodisable}}"
 
