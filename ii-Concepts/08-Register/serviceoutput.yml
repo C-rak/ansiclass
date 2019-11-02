@@ -11,7 +11,7 @@
 
     - name: Show output
       debug:
-        var: {{ item | items2dict}}
+        var: "{{ item | items2dict}}"
         loop: servicenamevar
       
 
