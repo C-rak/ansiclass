@@ -12,7 +12,7 @@
     - name: Show output
       debug:
         var: "{{ (servicenamevar.stdout | from_json).name}}"
-        when: {{(servicenamevar.stdout | from_json).Status == 4 }}
+        when: (servicenamevar.stdout | from_json).Status == 4
       
 
 # You can use below way as well
