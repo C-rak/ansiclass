@@ -9,12 +9,14 @@
       register: servicenamevar
       #when: ansible_distribution == "Microsoft Windows Server Datacenter" # you can use 'and' / 'or' keywork for multiple condition 
 
-    - name: Show output
-      debug:
-        msg: "{{servicenamevar.stdout | from_json}}"
+    - name: save variable
+      set_fact:
+        services: "{{servicenamevar.stdout | from_json}}"
         #when: (servicenamevar.stdout | from_json).Status == 4
       
-
+    - name : output
+      debug:
+        msg: services.status
 # You can use below way as well
 #when: 
  #       - ansible_distribution == "CentOS" 
