@@ -5,13 +5,13 @@
 
   tasks: 
     - name: Display Register value
-      win_shell:  get-service
+      win_shell:  get-service | select name,status
       register: servicenamevar
       #when: ansible_distribution == "Microsoft Windows Server Datacenter" # you can use 'and' / 'or' keywork for multiple condition 
 
     - name: Show output
       debug:
-        var: servicenamevar
+        var: {{ servicenamevar | items2dict}}
       
 
 # You can use below way as well
