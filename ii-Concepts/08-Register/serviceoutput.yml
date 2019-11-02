@@ -16,7 +16,7 @@
       
     - name : output
       debug:
-        msg: "{{services.status}}"
+        msg: "{{services.Status}}"
 # You can use below way as well
 #when: 
  #       - ansible_distribution == "CentOS" 
