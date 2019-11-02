@@ -19,11 +19,11 @@
       state : 
             {% for Serv in "{{servicesneedstodisable}}" -%}   
             {% if Serv == "BITS" -%}
-             stopped  
+              stopped  
             {% elif Serv == "Windows Audio" -%}
-             started
+              started
             {% else Serv == "Dnscache" -%}
-             started
+              started
             {% endif %}
             {% endfor -%}
       loop: >
