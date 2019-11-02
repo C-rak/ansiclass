@@ -21,7 +21,7 @@
           {%if "{{item}}" == "BITS" %}
             stopped
           {%else %}
-            running
+            started
           {% endif %}  
      loop: 
            "{{servicesneedstodisable}}"
