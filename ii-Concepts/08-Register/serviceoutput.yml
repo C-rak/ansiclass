@@ -12,7 +12,7 @@
     - name: Show output
       debug:
         var: "{{ item | dict2items}}"
-        loop: servicenamevar
+        loop: servicenamevar.stdout
       
 
 # You can use below way as well
