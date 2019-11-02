@@ -18,7 +18,8 @@
      win_service:
       name: "{{item}}"
       state: > 
-            {% for Serv in {{item}} -%}   
+            {% for Serv in lookup('vars',item) -%}  
+              Serv 
              {% if {{Serv}} == "BITS" -%}
               stopped  
              {% elif {{Serv}} == "Windows Audio" -%}
