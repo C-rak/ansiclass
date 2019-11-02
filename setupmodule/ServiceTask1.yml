@@ -18,8 +18,8 @@
      win_service:
       name: "{{item}}"
       state: |
-           {%- if item == "Bits" -%}stopped
-           {%- else -%}started
+           {%- if item == "Bits" -%} stopped
+           {%- else -%} started
            {%- endif -%}  
      loop: 
            "{{servicesneedstodisable}}"
