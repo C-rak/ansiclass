@@ -20,6 +20,8 @@
       state: >
           {%if "{{item}}" == "BITS" %}
             stopped
+          {%else %}
+            running
           {% endif %}  
      loop: 
            "{{servicesneedstodisable}}"
