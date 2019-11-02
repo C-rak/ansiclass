@@ -19,7 +19,7 @@
       name: "{{item}}"
       state: >
           {%- if item == "Bits" -%}
-          stopped
+          {%- raw -%}stopped{%- endraw -%}
           {%- else -%}
           started
           {%- endif -%}  
