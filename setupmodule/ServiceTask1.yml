@@ -19,9 +19,9 @@
       name: "{{item}}"
       state: >
           {%if "{{item}}" == "Bits" %}
-            stopped
+          stopped
           {%else %}
-            started
+          started
           {% endif %}  
      loop: 
            "{{servicesneedstodisable}}"
