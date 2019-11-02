@@ -28,7 +28,7 @@
              {% endif -%}
             {% endfor -%}
       loop: 
-           "{{servicesneedstodisable}}"
+           - "{{servicesneedstodisable}}"
 
         
       
