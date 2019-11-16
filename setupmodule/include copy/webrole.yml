@@ -6,7 +6,7 @@
    win_file: 
      path: c:\inetpub
      state: present
-      
+     
 
 
 ...
