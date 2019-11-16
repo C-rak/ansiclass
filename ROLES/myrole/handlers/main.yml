@@ -1,0 +1,7 @@
+---
+
+# handlers file for webserver
+ name: msg
+  debug: 
+    msg : "sending msg"
+...

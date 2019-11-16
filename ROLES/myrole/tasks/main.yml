@@ -1,0 +1,15 @@
+---
+# tasks file for webserver
+tasks:
+ - name: install feature
+   win_feature:
+    name: {{features}}
+    state: present 
+ - name: stop service
+   win_service: 
+    name: {{services}}
+    state: stopped
+handlers: 
+  notify: msg    
+    
+...

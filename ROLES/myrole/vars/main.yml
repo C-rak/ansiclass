@@ -1,0 +1,9 @@
+---
+# vars file for webserver
+features:
+ - web-server
+ - Telnet-Client
+service:
+ - BITS
+ - wuauserv
+...
