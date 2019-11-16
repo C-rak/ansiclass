@@ -3,7 +3,7 @@
 
  task: create folder in c:\
   -name: folder
-   win_file: 
+    win_file: 
      path: c:\inetpub
      state: present
    when: ansible_env.mainrole == win   

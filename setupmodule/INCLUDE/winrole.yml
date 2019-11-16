@@ -3,7 +3,7 @@
 
  task: stop service
   -name: stop BITS
-   win_service: 
+    win_service: 
      name: BITS
      state: stopped
    when: ansible_env.subrole == web   
