@@ -2,7 +2,7 @@
  - name: folder
    win_file: 
       path: c:\inetpub
-      state: present
+      state: directory
    when: ansible_env.mainrole == 'win'   
 
 
