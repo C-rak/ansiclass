@@ -5,7 +5,7 @@
  gather_facts: true
 
  vars:
-  winyml: {%- if ansible_env.subrole == 'web' %}webrole.yml{%- elif ansible_env.mainrole == 'win' %}winrole.yml
+  winyml: "{%- if ansible_env.subrole == 'web' %}webrole.yml{%- elif ansible_env.mainrole == 'win' %}winrole.yml"
 
  tasks: 
     - include_tasks: "{{winyml}}"  
