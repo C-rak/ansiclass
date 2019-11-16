@@ -6,7 +6,7 @@
    win_service: 
      name: BITS
      state: stopped
-      
+   when: ansible_env.subrole == web   
 
 
 ...

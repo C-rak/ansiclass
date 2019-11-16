@@ -5,13 +5,12 @@
  gather_facts: true
 
  tasks: 
-    - name: includetask 
     - include_tasks: webrole.yml
-      when: ansible_env.subrole == web 
+       
  
-    - name: include task
+   
     - include_tasks: winrole.yml
-      when: ansible_env.mainrole == win
+      
 
 
 ...
