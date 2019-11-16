@@ -4,8 +4,11 @@
  hosts: all
  gather_facts: true
 
+ vars:
+  winyml: "{%- if ansible_env.subrole = 'web' %}webrole.yml{%- else ansible_env.mainrole = 'win' %}winrole.yml"
+
  tasks: 
-    - include_tasks: {%- if ansible_env.subrole = 'web' %}webrole.yml{%- else ansible_env.mainrole = 'win' %}winrole.yml  
+    - include_tasks: "{{winyml}}"  
           
 
 
