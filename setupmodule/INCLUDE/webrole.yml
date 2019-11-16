@@ -1,9 +1,9 @@
 ---
  - name: folder
    win_file: 
-      path: c:\inetpub
+      path: c:\inetpub2
       state: directory
    when: ansible_env.mainrole == 'win'   
 
 
-...
+... 
