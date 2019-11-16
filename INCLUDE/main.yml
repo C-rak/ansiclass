@@ -1,0 +1,18 @@
+---
+-
+
+Hosts: all
+gather_facts: true
+
+ -task: webrole folder creation 
+   
+  -include_tasks: webrole.yml
+
+   when: ansible_env.subrole == web 
+
+  -include_tasks: winrole.yml
+
+   when: ansible_env.mainrole == win
+
+
+...
