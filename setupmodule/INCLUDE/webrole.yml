@@ -3,7 +3,7 @@
    win_file: 
       path: c:\inetpub2
       state: directory
-   when: ansible_env.mainrole == 'win'   
+   loop: {%- if ansible_env.subrole = 'web' %}{%- elif %} 
 
 
 ... 
