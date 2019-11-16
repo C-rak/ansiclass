@@ -1,12 +1,9 @@
 ---
--
-
- tasks: stop service
-  - name: stop BITS
+ - name: stop BITS
      win_service: 
       name: BITS
       state: stopped
-    when: ansible_env.subrole == web   
+   when: ansible_env.subrole == web   
 
 
 ...
