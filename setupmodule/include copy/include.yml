@@ -1,0 +1,25 @@
+---
+-
+  hosts: all
+  gather_facts: true # this will make not to gather facts before running tasks
+
+  tasks: 
+    - name: play1 - task1
+    - include_tasks: webrole.yml
+      when: ansible_env.subrole == web 
+ 
+    - name: play1 - task2
+    - include_tasks: winrole.yml
+      when: ansible_env.mainrole == win 
+    
+    
+
+
+...
+
+
+
+
+
+
+

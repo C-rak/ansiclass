@@ -1,0 +1,12 @@
+---
+-
+
+ task: create folder in c:\
+  -name: folder
+   win_file: 
+     path: c:\inetpub
+     state: present
+      
+
+
+...
