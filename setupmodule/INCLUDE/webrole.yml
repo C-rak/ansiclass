@@ -3,7 +3,7 @@
    win_file: 
       path: c:\inetpub
       state: present
-   when: ansible_env.mainrole == win   
+   when: 'ansible_env.mainrole == win'   
 
 
 ...
