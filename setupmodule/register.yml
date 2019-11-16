@@ -7,7 +7,6 @@
     - name: Display Register value
       win_shell:  get-service| convertto-json
       register: services
-
     - name: Show output
       debug:
         var: "{{ (services.stdout | from_json).status == running }}"
